@@ -49,14 +49,39 @@ const promptUser = () => {
 }
 
 const viewDepartments = () => {
-    const sql = `DESCRIBE department`;
+    const sql = `SELECT * FROM department`;
 
     db.query(sql, (err, rows) => {
         if (err) {
             // console.log(err);
             return;
         }
-        console.log(rows)
+        console.table(rows);
+        promptUser();
+    });
+};
+
+const viewRoles = () => {
+    const sql = `SELECT * FROM role`;
+
+    db.query(sql, (err, rows) => {
+        if (err) {
+            return err;
+        }
+        console.table(rows);
+        promptUser();
+    });
+};
+
+const viewHands = () => {
+    const sql = `SELECT * FROM employee;`;
+
+    db.query(sql, (err, rows) => {
+        if (err) {
+            return err;
+        }
+        console.table(rows);
+        promptUser();
     });
 };
 
@@ -64,10 +89,23 @@ const promptDepartment = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: ''
+            name: 'name',
+            message: 'What is the name of the department you would like to add?'
         }
-    ])
-}
+    ]).then(({ name }) => {
+        const sql = `INSERT INTO department (name)
+                     VALUES
+                        ('${name}')`;
+        // console.log(name);
+        db.query(sql, (err, rows) => {
+            if (err) {
+                console.log(err);
+                return err;
+            }
+            promptUser();
+        });
+    });
+};
 
 db.connect(err => {
     if (err) throw err;
