@@ -107,6 +107,104 @@ const promptDepartment = () => {
     });
 };
 
+const promptRole = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'roleName',
+            message: 'Please enter the name of the role you would like to add.'
+        },
+        {
+            type: 'number',
+            name: 'salary',
+            message: 'What is the salary of this role? (Please enter number with two decimal points!)'
+        },
+        {
+            type: 'number',
+            name: 'department',
+            message: 'Which department id will this role be associated with?'
+        }
+    ])
+    .then(({ roleName, salary, department }) => {
+        const sql = `INSERT INTO role (title, salary, department_id)
+                     VALUES
+                        ('${roleName}', ${salary}, ${department})`;
+
+        db.query(sql, (err, rows) => {
+            if (err) {
+                console.log(err);
+                return err;
+            }
+            promptUser();
+        });
+    });
+};
+
+const promptEmployee = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'firstName',
+            message: 'What is the first name of the employee we are adding today?'
+        },
+        {
+            type: 'input',
+            name: 'lastName',
+            message: 'What is the last name of the employee we are adding today?'
+        },
+        {
+            type: 'number',
+            name: 'roleId',
+            message: 'What is the role id of the employee we are adding today?'
+        },
+        {
+            type: 'number',
+            name: 'managerId',
+            message: 'What is the managers id that will be in charge of this employee?'
+        }
+    ])
+    .then(({ firstName, lastName, roleId, managerId }) => {
+        const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id)
+                     VALUES
+                        ('${firstName}', '${lastName}', ${roleId}, ${managerId})`;
+        
+        db.query (sql, (err, rows) => {
+            if (err) {
+                console.log(err);
+                return err;
+            }
+            promptUser();
+        });
+    });
+};
+
+const updateRole = () => {
+    return inquirer.prompt([
+        {
+            type: 'number',
+            name: 'employeeId',
+            message: 'What is the id of the employee you would like to update?'
+        },
+        {
+            type: 'number',
+            name: 'newRole',
+            message: 'Please enter the updated role id for this employee.'
+        }
+    ])
+    .then(({ employeeId, newRole }) => {
+        const sql = `UPDATE employee SET role_id = ${newRole}
+                     WHERE id = ${employeeId}`
+
+        db.query(sql, (err, rows) => {
+            if (err) {
+                console.log(err);
+                return err;
+            }
+            promptUser();
+        })
+    })
+}
+
 db.connect(err => {
     if (err) throw err;
     console.log('Database connected')
