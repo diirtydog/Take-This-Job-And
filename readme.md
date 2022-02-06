@@ -1,8 +1,7 @@
 #Take This Job And  [Link to Website](https://github.com/diirtydog/Take-This-Job-And)
   ## License
     This project is licensed under MIT.
-  [![License](https://img.shields.io/badge/License-MIT-blue.svg)]
-  * [License](#license)
+  ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
   ## Video Link Screencastify link: https://watch.screencastify.com/v/NkYhIwxyN6AQTMAwURaY
   <img src="assets\Untitled_ Feb 5, 2022 9_42 PM.gif" alt="">
