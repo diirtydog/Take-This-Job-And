@@ -26,7 +26,7 @@
   <img src="assets\Screenshot (28).png" alt="Repository image">
 
   ## Contributions
-  ![GitHub Contributors Image](https://contrib.rocks/image?repo=Sly-Ry/Take-This-Job-And)
+  ![GitHub Contributors Image](https://contrib.rocks/image?repo=diirtydog/Take-This-Job-And)
   ![GitHub Contributors Image](https://contrib.rocks/image?repo=Your_GitHub_Username/Your_GitHub_Repository_Name)
   ![GitHub Contributors Image](https://contrib.rocks/image?repo=Your_GitHub_Username/Your_GitHub_Repository_Name)
   Ryan Williams, Gunther Wagoner, and Jared Worsham.
