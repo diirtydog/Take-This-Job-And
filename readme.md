@@ -1,4 +1,4 @@
-#Take This Job And  [Link to Website](https://github.com/diirtydog/Take-This-Job-And)
+# Take This Job And  [Link to Website](https://github.com/diirtydog/Take-This-Job-And)
   ## License
     This project is licensed under MIT.
   ![License](https://img.shields.io/badge/License-MIT-blue.svg)
@@ -18,7 +18,7 @@
   ## Description Of The Repository
   This application allows the user to add to his company database and track all of his employees throughout their roles and departments in which they work.
   ## Languages That Were Used During Creation
- https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+  https://img.shields.io:/github/languages/top/diirtydog/Take-This-Job-And?style=for-the-badge
   ## Installation Instructions
   This application uses mysql2, inquirer, and the console.table npm packages.
   ## Usage Information
