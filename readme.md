@@ -26,7 +26,7 @@
   <img src="assets\Screenshot (28).png" alt="Repository image">
 
   ## Contributions
-  ![Gunther Wagoner](https://contrib.rocks/image?repo=GunnySensei/Employee-Tracker)
+  [![Gunther Wagoner](https://contrib.rocks/image?repo=GunnySensei/Employee-Tracker)](https://github.com/GunnySensei/Employee-Tracker)
   ![Ryan Williams](https://contrib.rocks/image?repo=Sly-Ry/NoSpace)
   ![Jared Worsham](https://contrib.rocks/image?repo=jaredtrp/employee-tracker)
   ## Testing Instructions
