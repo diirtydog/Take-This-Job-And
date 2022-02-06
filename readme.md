@@ -18,7 +18,6 @@
   ## Description Of The Repository
   This application allows the user to add to his company database and track all of his employees throughout their roles and departments in which they work.
   ## Languages That Were Used During Creation
-  ![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=diirtydog&theme=blue-green)
   Javascript
   ## Installation Instructions
   This application uses mysql2, inquirer, and the console.table npm packages.
@@ -34,5 +33,6 @@
   ### Andrew   
   Github: https://github.com/diirtydog   
   Contact Info: andrew.derek.wales@gmail.com
+  ![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Your_GitHub_Username&theme=blue-green)
 
 
