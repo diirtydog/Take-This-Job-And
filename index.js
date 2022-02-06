@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const db = require('./db/connection');
+const cTable = require('console.table');
 
 
 const promptUser = () => {
@@ -15,7 +16,8 @@ const promptUser = () => {
                     'Add a Department', 
                     'Add a Role', 
                     'Add an Employee', 
-                    'Update an Employee Role'
+                    'Update an Employee Role',
+                    'How much do I pay a year in salaries?'
                     ]
         }
     ])
@@ -42,6 +44,9 @@ const promptUser = () => {
             break;
             case 'Update an Employee Role':
                 updateRole();
+            break;
+            case 'How much do I pay a year in salaries?':
+                littleAdding();
             break;
 
         }
@@ -74,7 +79,11 @@ const viewRoles = () => {
 };
 
 const viewHands = () => {
-    const sql = `SELECT * FROM employee;`;
+    const sql =  `SELECT employee.*, role.salary
+                  AS role_salary
+                  FROM employee
+                  LEFT JOIN role
+                  ON employee.role_id = role.id`;
 
     db.query(sql, (err, rows) => {
         if (err) {
@@ -201,8 +210,12 @@ const updateRole = () => {
                 return err;
             }
             promptUser();
-        })
-    })
+        });
+    });
+};
+
+const littleAdding = () => {
+    const sql = ``
 }
 
 db.connect(err => {
