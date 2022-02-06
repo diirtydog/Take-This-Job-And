@@ -29,7 +29,6 @@
   ![GitHub Contributors Image](https://contrib.rocks/image?repo=GunnySensei/Employee-Tracker)
   ![GitHub Contributors Image](https://contrib.rocks/image?repo=Sly-Ry/NoSpace)
   ![GitHub Contributors Image](https://contrib.rocks/image?repo=jaredtrp/employee-tracker)
-  Ryan Williams, Gunther Wagoner, and Jared Worsham.
   ## Testing Instructions
   No tests are needed for this application.
   ## Contact Information
