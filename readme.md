@@ -18,7 +18,7 @@
   ## Description Of The Repository
   This application allows the user to add to his company database and track all of his employees throughout their roles and departments in which they work.
   ## Languages That Were Used During Creation
-  https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1
+ https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
   ## Installation Instructions
   This application uses mysql2, inquirer, and the console.table npm packages.
   ## Usage Information
